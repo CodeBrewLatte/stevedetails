@@ -1,61 +1,124 @@
 /* app/Home.module.css */
 .container {
     font-family: Arial, sans-serif;
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
   }
   
-  .header {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #0044cc;
-    color: white;
-  }
-  
-  .nav {
+  .navbar {
     display: flex;
-    justify-content: center;
-    margin: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0044cc;
+    padding: 10px 20px;
+    color: white;
   }
   
-  .nav a {
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .navLinks a {
     margin: 0 10px;
-    padding: 10px 20px;
-    text-decoration: none;
-    background-color: #007bff;
     color: white;
+    text-decoration: none;
+  }
+  
+  .cta {
+    background-color: #ff9900;
+    padding: 10px 20px;
     border-radius: 5px;
   }
   
-  .nav a:hover {
-    background-color: #0056b3;
+  .hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url('/hero-placeholder.jpg');
+    background-size: cover;
+    color: white;
   }
   
-  .services {
+  .hero h1 {
+    font-size: 3em;
+  }
+  
+  .hero p {
+    font-size: 1.5em;
+    margin: 20px 0;
+  }
+  
+  .bookNow {
+    background-color: #ff9900;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  .contactInfo {
+    margin-top: 20px;
+  }
+  
+  .experience {
     text-align: center;
+    padding: 50px 20px;
+    background-color: #f1f1f1;
+  }
+  
+  .experience h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
   }
   
   .serviceList {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
   }
   
   .serviceItem {
-    background-color: #f8f9fa;
-    padding: 20px;
+    background-color: white;
     margin: 10px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 30%;
     min-width: 200px;
+    text-align: center;
+  }
+  
+  .serviceItem img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .statistics {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #0044cc;
+    color: white;
+  }
+  
+  .statistics h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .learnMore {
+    background-color: #ff9900;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
   }
   
   .footer {
     text-align: center;
     padding: 20px 0;
-    margin-top: 20px;
     background-color: #f1f1f1;
   }
   

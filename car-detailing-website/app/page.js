@@ -8,31 +8,53 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1>Welcome to Steve's Car Detailing</h1>
-        <p>Your car deserves the best care. Shine like never before!</p>
+        <div className={styles.navbar}>
+          <div className={styles.logo}>Steve's Car Detailing</div>
+          <nav className={styles.navLinks}>
+            <Link href="/">Home</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/about">About</Link>
+            <Link href="/contact">Contact</Link>
+            <Link href="/booking" className={styles.cta}>Request A Quote</Link>
+          </nav>
+        </div>
       </header>
-      <nav className={styles.nav}>
-        <Link href="/booking">Book a Slot</Link>
-        <Link href="/pricing">View Pricing</Link>
-        <Link href="/about">About Us</Link>
-      </nav>
-      <section className={styles.services}>
-        <h2>Our Services</h2>
+
+      <section className={styles.hero}>
+        <h1>Keep Your Car Clean Always</h1>
+        <p>Steve's Car Detailing is dedicated to changing the way you think about car care.</p>
+        <Link href="/booking" className={styles.bookNow}>Book A Wash</Link>
+        <div className={styles.contactInfo}>
+          <span>Call Us Now At: +8801730340103</span>
+          <span>Our Location: Shibganj, Sylhet</span>
+        </div>
+      </section>
+
+      <section className={styles.experience}>
+        <h2>Based On Experience</h2>
         <div className={styles.serviceList}>
           <div className={styles.serviceItem}>
-            <h3>Exterior Detailing</h3>
-            <p>Complete exterior wash, wax, and polish to make your car shine.</p>
+            <img src="/placeholder1.jpg" alt="Service 1" />
+            <p>Expert exterior detailing</p>
           </div>
           <div className={styles.serviceItem}>
-            <h3>Interior Detailing</h3>
-            <p>Thorough cleaning of the interior including seats, dashboard, and carpets.</p>
+            <img src="/placeholder2.jpg" alt="Service 2" />
+            <p>Professional interior cleaning</p>
           </div>
           <div className={styles.serviceItem}>
-            <h3>Engine Detailing</h3>
-            <p>Professional cleaning of the engine to keep it running smoothly.</p>
+            <img src="/placeholder3.jpg" alt="Service 3" />
+            <p>Advanced paint correction</p>
           </div>
         </div>
       </section>
+
+      <section className={styles.statistics}>
+        <h2>Our Statistics</h2>
+        <p>We have more than 10+ years of car services experience.</p>
+        <p>We have more than 1.5k+ vehicles serviced.</p>
+        <Link href="/about" className={styles.learnMore}>Learn More</Link>
+      </section>
+
       <footer className={styles.footer}>
         <p>&copy; 2024 Steve's Car Detailing. All rights reserved.</p>
       </footer>
