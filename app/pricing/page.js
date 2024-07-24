@@ -1,29 +1,36 @@
-// app/pricing/page.js
 "use client";
 
+import Layout from '../components/Layout';
 import styles from './Pricing.module.css';
 
 export default function Pricing() {
   return (
-    <div className={styles.container}>
-      <h1>Our Pricing</h1>
-      <ul className={styles.pricingList}>
-        <li>
-          <h3>Basic Detail</h3>
-          <p>$50</p>
-          <p>Exterior wash and wax, interior vacuum, and window cleaning.</p>
-        </li>
-        <li>
-          <h3>Full Detail</h3>
-          <p>$100</p>
-          <p>Includes Basic Detail plus engine cleaning and upholstery shampoo.</p>
-        </li>
-        <li>
-          <h3>Premium Detail</h3>
-          <p>$150</p>
-          <p>Includes Full Detail plus paint correction and ceramic coating.</p>
-        </li>
-      </ul>
-    </div>
+    <Layout>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Our Pricing</h1>
+        <div className={styles.priceList}>
+          <div className={styles.priceItem}>
+            <h2 className={styles.priceItemTitle}>Basic Exterior Wash</h2>
+            <p className={styles.priceItemPrice}>$25</p>
+            <p className={styles.priceItemDescription}>Includes a thorough exterior wash using safe, high-quality products.</p>
+          </div>
+          <div className={styles.priceItem}>
+            <h2 className={styles.priceItemTitle}>Interior Vacuum and Wipe Down</h2>
+            <p className={styles.priceItemPrice}>$40</p>
+            <p className={styles.priceItemDescription}>Complete interior vacuum and wipe down of all surfaces with an all-purpose cleaner.</p>
+          </div>
+          <div className={styles.priceItem}>
+            <h2 className={styles.priceItemTitle}>Full Interior Detail</h2>
+            <p className={styles.priceItemPrice}>$75</p>
+            <p className={styles.priceItemDescription}>Includes vacuuming, wipe down, and detailed cleaning of all interior surfaces.</p>
+          </div>
+          <div className={styles.priceItem}>
+            <h2 className={styles.priceItemTitle}>Full Exterior and Interior Detail</h2>
+            <p className={styles.priceItemPrice}>$100</p>
+            <p className={styles.priceItemDescription}>Complete exterior wash and interior detailing, leaving your car looking like new.</p>
+          </div>
+        </div>
+      </div>
+    </Layout>
   );
 }
