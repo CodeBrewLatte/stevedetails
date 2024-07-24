@@ -1,124 +1,179 @@
 /* app/Home.module.css */
+
 .container {
-    font-family: Arial, sans-serif;
-    padding: 0;
-    margin: 0;
-    max-width: 100%;
-  }
-  
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0044cc;
+  padding: 15px 20px;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navLinks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navLinks a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.cta {
+  background-color: #ff9900;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background-image: url('/hero-placeholder.jpg');
+  background-size: cover;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+
+.bookNow {
+  background-color: #ff9900;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.contactInfo {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.experience {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f1f1f1;
+}
+
+.experience h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.serviceList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.serviceItem {
+  background-color: white;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.serviceItem img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.statistics {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #0044cc;
+  color: white;
+}
+
+.statistics h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.learnMore {
+  background-color: #ff9900;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0044cc;
-    padding: 10px 20px;
-    color: white;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .logo {
-    font-size: 1.5em;
-    font-weight: bold;
+
+  .navLinks {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
   }
-  
+
   .navLinks a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .cta {
-    background-color: #ff9900;
-    padding: 10px 20px;
-    border-radius: 5px;
-  }
-  
-  .hero {
+    margin: 5px 0;
+    width: 100%;
     text-align: center;
-    padding: 50px 20px;
-    background-image: url('/hero-placeholder.jpg');
-    background-size: cover;
-    color: white;
   }
-  
+
+  .hero {
+    padding: 40px 20px;
+  }
+
   .hero h1 {
-    font-size: 3em;
+    font-size: 2.5em;
   }
-  
+
   .hero p {
-    font-size: 1.5em;
-    margin: 20px 0;
-  }
-  
-  .bookNow {
-    background-color: #ff9900;
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: white;
-    text-decoration: none;
     font-size: 1.2em;
   }
-  
+
+  .bookNow {
+    font-size: 1em;
+  }
+
   .contactInfo {
-    margin-top: 20px;
+    font-size: 1em;
   }
-  
-  .experience {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f1f1f1;
-  }
-  
+
   .experience h2 {
     font-size: 2em;
-    margin-bottom: 20px;
   }
-  
-  .serviceList {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .serviceItem {
-    background-color: white;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    min-width: 200px;
-    text-align: center;
-  }
-  
-  .serviceItem img {
-    max-width: 100%;
-    border-radius: 10px;
-  }
-  
-  .statistics {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #0044cc;
-    color: white;
-  }
-  
+
   .statistics h2 {
     font-size: 2em;
-    margin-bottom: 20px;
   }
-  
-  .learnMore {
-    background-color: #ff9900;
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-  }
-  
-  .footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #f1f1f1;
-  }
-  
+}
