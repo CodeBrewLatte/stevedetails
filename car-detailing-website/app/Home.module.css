@@ -1,0 +1,61 @@
+/* app/Home.module.css */
+.container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #0044cc;
+    color: white;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .nav a {
+    margin: 0 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .nav a:hover {
+    background-color: #0056b3;
+  }
+  
+  .services {
+    text-align: center;
+  }
+  
+  .serviceList {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .serviceItem {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 200px;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    background-color: #f1f1f1;
+  }
+  

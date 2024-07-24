@@ -1,0 +1,26 @@
+/* app/pricing/Pricing.module.css */
+.container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .pricingList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .pricingList li {
+    background-color: #f8f9fa;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pricingList h3 {
+    margin: 0;
+  }
+  
