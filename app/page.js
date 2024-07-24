@@ -9,15 +9,17 @@ export default function Home() {
     <Layout>
       <div className={styles.container}>
         <section className={styles.hero}>
-          <h1>Keep Your Car Clean Always</h1>
-          <p>Steve's Car Detailing is dedicated to changing the way you think about car care.</p>
-          <Link href="/booking" className={styles.bookNow}>Book A Wash</Link>
-          <div className={styles.contactInfo}>
-            <span>Call Us Now At: +8801730340103</span>
-            <span>Our Location: Shibganj, Sylhet</span>
+          <div className={styles.wrapper}>
+            <h1>Dedicated to Keeping Your Car Looking Clean</h1>
+            <p>Steve's Car Detailing is a mobile service to clean your car right from your driveway. Book an appointment with me today!</p>
+            <Link href="/booking" className={styles.bookNow}>Book A Wash</Link>
+            <div className={styles.contactInfo}>
+              <span>Send me an email: stevedetailsNJ@gmail.com</span>
+              <span>Our Location: Manahawkin, NJ</span>
+            </div>
           </div>
         </section>
-
+        
         <section className={styles.experience}>
           <h2>Based On Experience</h2>
           <div className={styles.serviceList}>

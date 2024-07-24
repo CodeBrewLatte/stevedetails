@@ -1,5 +1,7 @@
 /* app/components/Layout.module.css */
 
+/* Existing styles */
+
 .container {
     font-family: Arial, sans-serif;
     padding: 0;
@@ -9,7 +11,7 @@
   
   .header {
     background-color: #0044cc;
-    padding: 10px 20px; /* Padding adjusted for the header */
+    padding: 10px 20px;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -107,5 +109,12 @@
     .hamburger {
       display: flex;
     }
+  }
+  
+  /* New Wrapper Class */
+  .wrapper {
+    max-width: 200px;
+    margin: 0 auto;
+    text-align: center;
   }
   

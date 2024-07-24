@@ -16,4 +16,11 @@ nav a:hover {
   text-decoration: underline;
 }
 
+.wrapper {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  vertical-align: center;
+  flex-direction: row;
+}
 

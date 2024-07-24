@@ -44,16 +44,31 @@
   background-image: url('/hero-placeholder.jpg');
   background-size: cover;
   color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  z-index: 1;
+}
+
+.hero .wrapper {
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {
   font-size: 3em;
-  margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 1.5em;
-  margin: 20px 0;
 }
 
 .bookNow {
@@ -176,4 +191,11 @@
   .statistics h2 {
     font-size: 2em;
   }
+}
+
+/* New Wrapper Class */
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
