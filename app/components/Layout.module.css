@@ -7,84 +7,93 @@
     padding: 0;
     margin: 0;
     max-width: 100%;
-  }
+}
   
-  .header {
+.header {
     background-color: #0044cc;
     padding: 10px 20px;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+    position: relative;
+    z-index: 4; /* Increased z-index */
+}
   
-  .navbar {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-  }
+}
   
-  .logo {
+.logo {
     font-size: 1.5em;
     font-weight: bold;
-  }
+}
   
-  .navLinks {
+.navLinks {
     display: flex;
     align-items: center;
-  }
+    position: relative;
+    z-index: 4; /* Increased z-index */
+}
   
-  .navLinks a {
+.navLinks a {
     margin: 0 10px;
     color: white;
     text-decoration: none;
-  }
+}
   
-  .cta {
+.cta {
     background-color: #ff9900;
     padding: 10px 20px;
     border-radius: 5px;
-  }
+    position: relative;
+    z-index: 4; /* Increased z-index */
+}
   
-  .footer {
+.footer {
     text-align: center;
     padding: 20px 0;
     background-color: #f1f1f1;
-  }
+    margin-top: 20px;
+}
   
-  /* Hamburger Menu Styles */
-  .hamburger {
+/* Hamburger Menu Styles */
+.hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
     width: 25px;
     height: 18px;
     justify-content: space-between;
-  }
+    position: relative;
+    z-index: 5; /* Increased z-index */
+}
   
-  .line {
+.line {
     width: 100%;
     height: 2px;
     background-color: white;
     transition: transform 0.4s, opacity 0.4s;
     margin: 2px 0;
-  }
+}
   
-  .line1 {
+.line1 {
     transform: rotate(-45deg) translate(-5px, 5px);
-  }
+}
   
-  .line2 {
+.line2 {
     opacity: 0;
-  }
+}
   
-  .line3 {
+.line3 {
     transform: rotate(45deg) translate(-5px, -5px);
-  }
+}
   
-  /* Responsive Styles */
-  @media (max-width: 768px) {
+/* Responsive Styles */
+@media (max-width: 768px) {
     .navLinks {
       display: none;
       flex-direction: column;
@@ -92,13 +101,14 @@
       text-align: center;
       background-color: #0044cc;
       position: absolute;
-      top: 60px;
+      top: 48px;
       left: 0;
-      z-index: 1;
+      z-index: 4; /* Increased z-index */
     }
   
     .navActive {
       display: flex;
+      z-index: 5; /* Increased z-index */
     }
   
     .navLinks a {
@@ -108,7 +118,4 @@
     .hamburger {
       display: flex;
     }
-  }
-  
-
-  
+}
