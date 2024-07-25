@@ -54,7 +54,6 @@
     text-align: center;
     padding: 20px 0;
     background-color: #f1f1f1;
-    margin-top: 20px;
   }
   
   /* Hamburger Menu Styles */
@@ -114,12 +113,7 @@
     }
   }
   
-  /* New Wrapper Class */
-  .Layout_wrapper__FQDwC {
-    max-width: 200px;
-    margin: 0 auto;
-    text-align: center;
-  }
+
   
 /*!**************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/pricing/Pricing.module.css ***!
@@ -148,36 +142,51 @@
   align-items: center;
 }
 
-.Pricing_priceItem__0S_ST {
-  background-color: white;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 600px;
+.Pricing_selector__v8Js3 {
+  margin: 10px 0;
   text-align: left;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.Pricing_priceItem__0S_ST:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-
-.Pricing_priceItemTitle__lc_C9 {
-  font-size: 1.8em;
-  margin-bottom: 10px;
-  color: #0044cc;
-}
-
-.Pricing_priceItemPrice__tGj1g {
-  font-size: 1.5em;
+.Pricing_selector__v8Js3 label {
+  display: block;
+  margin-bottom: 5px;
   font-weight: bold;
-  color: #ff9900;
 }
 
-.Pricing_priceItemDescription__KEj7h {
-  margin: 5px 0;
+.Pricing_selector__v8Js3 select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.Pricing_calculateButton__2DrS7 {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Pricing_calculateButton__2DrS7:hover {
+  background-color: #cc7a00;
+}
+
+.Pricing_error__8dmj7 {
+  margin-top: 10px;
+  color: red;
+  font-weight: bold;
+}
+
+.Pricing_priceResult__f2_tU {
+  margin-top: 20px;
+}
+
+.Pricing_priceResult__f2_tU h2 {
+  font-size: 2em;
+  color: #0044cc;
 }
 

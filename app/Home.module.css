@@ -14,6 +14,8 @@
   background-color: #0044cc;
   padding: 15px 20px;
   color: white;
+  position: relative;
+  z-index: 3;
 }
 
 .logo {
@@ -24,6 +26,8 @@
 .navLinks {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 4;
 }
 
 .navLinks a {
@@ -36,6 +40,8 @@
   background-color: #ff9900;
   padding: 10px 20px;
   border-radius: 5px;
+  position: relative;
+  z-index: 4;
 }
 
 .hero {
@@ -78,11 +84,15 @@
   color: white;
   text-decoration: none;
   font-size: 1.2em;
+  position: relative;
+  z-index: 2;
 }
 
 .contactInfo {
   margin-top: 20px;
   font-size: 1.2em;
+  position: relative;
+  z-index: 2;
 }
 
 .experience {
@@ -145,6 +155,58 @@
   background-color: #f1f1f1;
 }
 
+.howItWorks {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.howItWorks h2 {
+  font-size: 2.5em;
+  margin-bottom: 50px;
+}
+
+.stepsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.step {
+  flex: 1;
+  margin: 20px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.step img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain; /* Change from cover to contain */
+  border-radius: 0; /* Remove border-radius */
+  margin-bottom: 20px;
+}
+
+
+.step h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.step p {
+  font-size: 1em;
+  color: #555;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .navbar {
@@ -190,6 +252,16 @@
 
   .statistics h2 {
     font-size: 2em;
+  }
+
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    max-width: none;
+    width: 100%;
   }
 }
 

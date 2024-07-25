@@ -18,7 +18,6 @@ export default function Layout({ children }) {
           <div className={styles.logo}>Steve's Car Detailing</div>
           <nav className={`${styles.navLinks} ${menuOpen ? styles.navActive : ''}`}>
             <Link href="/" onClick={toggleMenu} className={styles.menuItem}>Home</Link>
-            <Link href="/services" onClick={toggleMenu} className={styles.menuItem}>Services</Link>
             <Link href="/about" onClick={toggleMenu} className={styles.menuItem}>About</Link>
             <Link href="/contact" onClick={toggleMenu} className={styles.menuItem}>Contact</Link>
             <Link href="/pricing" onClick={toggleMenu} className={styles.menuItem}>Pricing</Link>

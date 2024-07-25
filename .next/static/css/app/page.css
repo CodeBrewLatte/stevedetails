@@ -54,7 +54,6 @@
     text-align: center;
     padding: 20px 0;
     background-color: #f1f1f1;
-    margin-top: 20px;
   }
   
   /* Hamburger Menu Styles */
@@ -114,12 +113,7 @@
     }
   }
   
-  /* New Wrapper Class */
-  .Layout_wrapper__FQDwC {
-    max-width: 200px;
-    margin: 0 auto;
-    text-align: center;
-  }
+
   
 /*!***************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/Home.module.css ***!
@@ -140,6 +134,8 @@
   background-color: #0044cc;
   padding: 15px 20px;
   color: white;
+  position: relative;
+  z-index: 3;
 }
 
 .Home_logo__K5PJX {
@@ -150,6 +146,8 @@
 .Home_navLinks__sPebR {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 4;
 }
 
 .Home_navLinks__sPebR a {
@@ -162,6 +160,8 @@
   background-color: #ff9900;
   padding: 10px 20px;
   border-radius: 5px;
+  position: relative;
+  z-index: 4;
 }
 
 .Home_hero__HHP4x {
@@ -204,11 +204,15 @@
   color: white;
   text-decoration: none;
   font-size: 1.2em;
+  position: relative;
+  z-index: 2;
 }
 
 .Home_contactInfo__QB3G7 {
   margin-top: 20px;
   font-size: 1.2em;
+  position: relative;
+  z-index: 2;
 }
 
 .Home_experience__NAeop {
@@ -271,6 +275,58 @@
   background-color: #f1f1f1;
 }
 
+.Home_howItWorks__rmSVW {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.Home_howItWorks__rmSVW h2 {
+  font-size: 2.5em;
+  margin-bottom: 50px;
+}
+
+.Home_stepsContainer__9aSmi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Home_steps__QKdia {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.Home_step__2PCMW {
+  flex: 1;
+  margin: 20px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.Home_step__2PCMW img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain; /* Change from cover to contain */
+  border-radius: 0; /* Remove border-radius */
+  margin-bottom: 20px;
+}
+
+
+.Home_step__2PCMW h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.Home_step__2PCMW p {
+  font-size: 1em;
+  color: #555;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .Home_navbar__DdnTE {
@@ -316,6 +372,16 @@
 
   .Home_statistics__CWo4A h2 {
     font-size: 2em;
+  }
+
+  .Home_steps__QKdia {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Home_step__2PCMW {
+    max-width: none;
+    width: 100%;
   }
 }
 

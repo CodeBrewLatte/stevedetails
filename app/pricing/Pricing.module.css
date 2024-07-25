@@ -22,35 +22,50 @@
   align-items: center;
 }
 
-.priceItem {
-  background-color: white;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 600px;
+.selector {
+  margin: 10px 0;
   text-align: left;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.priceItem:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-
-.priceItemTitle {
-  font-size: 1.8em;
-  margin-bottom: 10px;
-  color: #0044cc;
-}
-
-.priceItemPrice {
-  font-size: 1.5em;
+.selector label {
+  display: block;
+  margin-bottom: 5px;
   font-weight: bold;
-  color: #ff9900;
 }
 
-.priceItemDescription {
-  margin: 5px 0;
+.selector select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.calculateButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calculateButton:hover {
+  background-color: #cc7a00;
+}
+
+.error {
+  margin-top: 10px;
+  color: red;
+  font-weight: bold;
+}
+
+.priceResult {
+  margin-top: 20px;
+}
+
+.priceResult h2 {
+  font-size: 2em;
+  color: #0044cc;
 }

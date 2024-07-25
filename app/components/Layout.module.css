@@ -51,7 +51,6 @@
     text-align: center;
     padding: 20px 0;
     background-color: #f1f1f1;
-    margin-top: 20px;
   }
   
   /* Hamburger Menu Styles */
@@ -111,10 +110,5 @@
     }
   }
   
-  /* New Wrapper Class */
-  .wrapper {
-    max-width: 200px;
-    margin: 0 auto;
-    text-align: center;
-  }
+
   
