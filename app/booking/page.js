@@ -1,34 +1,49 @@
 // app/booking/page.js
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Layout from '../components/Layout';
 import styles from './Booking.module.css';
 
 export default function Booking() {
-  const [date, setDate] = useState('');
-  const [time, setTime] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
-  const handleBooking = (e) => {
-    e.preventDefault();
-    alert(`Booked for ${date} at ${time}`);
-  };
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsLoading(false);
+    };
+
+    window.addEventListener('CalendlyLoaded', handleLoad);
+
+    const script = document.createElement('script');
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    script.onload = () => {
+      setTimeout(() => {
+        const calendlyIframe = document.querySelector('.calendly-inline-widget iframe');
+        if (calendlyIframe) {
+          calendlyIframe.onload = () => {
+            window.dispatchEvent(new Event('CalendlyLoaded'));
+          };
+        }
+      }, 500);
+    };
+    document.body.appendChild(script);
+
+    return () => {
+      window.removeEventListener('CalendlyLoaded', handleLoad);
+    };
+  }, []);
 
   return (
-    <div className={styles.container}>
-      <h1>Book a Time Slot</h1>
-      <form onSubmit={handleBooking} className={styles.form}>
-        <label>
-          Date:
-          <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
-        </label>
-        <br />
-        <label>
-          Time:
-          <input type="time" value={time} onChange={(e) => setTime(e.target.value)} required />
-        </label>
-        <br />
-        <button type="submit">Book Now</button>
-      </form>
-    </div>
+    <Layout>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Book a Time Slot</h1>
+        {isLoading && <p>Loading...</p>}
+        <div className={styles.calendlyWidget}>
+          <div className="calendly-inline-widget" data-url="https://calendly.com/stevedetailsnj/30min" style={{ minWidth: '320px', height: '700px' }}></div>
+        </div>
+      </div>
+    </Layout>
   );
 }
